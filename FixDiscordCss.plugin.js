@@ -139,7 +139,7 @@ module.exports = class FixDiscordCss {
 
     handleNodes(nodes) {
         for (const node of nodes) {
-            if (node.nodeType !== Node.ELEMENT_NODE || !node.matches('link[rel="stylesheet"]')) return;
+            if (node.nodeType !== Node.ELEMENT_NODE) return;
 
             const linkNode = node;
 
