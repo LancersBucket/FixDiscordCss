@@ -8,6 +8,11 @@
  * @source https://raw.githubusercontent.com/LancersBucket/FixDiscordCss/refs/heads/main/FixDiscordCss.plugin.js
  */
 
+/* 
+    Original Copyright: Copyright (c) 2026 Vendicated and contributors
+    https://github.com/Vendicated/Vencord/blob/main/src/plugins/_core/fixDiscordCss.ts
+*/
+
 const config = {
     info: {
         github: 'https://github.com/LancersBucket/FixDiscordCss',
