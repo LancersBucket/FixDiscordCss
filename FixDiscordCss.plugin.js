@@ -139,7 +139,7 @@ module.exports = class FixDiscordCss {
 
     handleNodes(nodes) {
         for (const node of nodes) {
-            if (node.nodeType !== Node.ELEMENT_NODE) return;
+            if (node.nodeType !== Node.ELEMENT_NODE || !node.matches('link[rel="stylesheet"]')) return;
 
             const linkNode = node;
 
@@ -170,6 +170,10 @@ module.exports = class FixDiscordCss {
         } catch (e) { 
             this.api.Logger.error(e);
         }
+    }
+
+    observer(mutation) {
+        this.handleNodes(mutation.addedNodes);
     }
 
     stop() { }
